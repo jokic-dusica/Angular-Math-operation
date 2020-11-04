@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<link href="css/style.css" rel="stylesheet">
+		
+		
+		<!-- Bootstrap CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+		<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+	
+		<title> Math operation</title>
+	
+	
+	</head>
+	
+	
+	<body>
+		<header> 
+			<div class="header">
+				
+					<h1> Math operation</h1>
+				
+			</div>
+		</header>
+		
+		
+	<section class="main">
+		<div class="container">
+			<div class="row">
+				<div class="col-3">
+					<p>Choose operation:</p>
+					<select onchange="chooseElement(value)">
+						<option value="summ">Choose operation</option>
+						<option value=".assignment1">Sum odd numbers</option>
+						<option value=".assignment2">Arithmetic mean</option>
+						<option value=".assignment3">Factorial Recursive</option>
+						<option value=".assignment4">Factorial</option>
+						<option value=".assignment5">Combinations Factorial</option>
+						<option value=".assignment6">Combinations</option>
+						<option value=".assignment7">Sort array</option>
+						<option value=".assignment8">Sort object</option>
+					</select>
+				</div>
+				<div class="col-9">
+					<div class="assignment1">
+						<p> Sum odd numbers</p>
+						
+						<p>Addition odd numbers</p>
+						<p>Addition all odd numbers from k to n</p>
+						<p>Addition odd numbers between:</p><input type="number" class="additioninput1" name="k"><span> and </span><input type="number" class="additioninput2" name="n"><button type="button" onclick="additionOddArray()" value="Calculate">Calculate</button>
+						<p> Result: <span class="result"> </span></p>
+					</div>
+					<div class="assignment2">
+						<p>Arithmetic mean</p>
+						
+						<p>Addition even numbers</p>
+						<p>Addition all even numbers from k to n</p>
+						<p>Addition even numbers between:</p><input type="number" class="additioneven1" name="k"> <span> and </span> <input type="number" class="additioneven2" name="n"><button type="button" onclick="arithmeticMean()" value="Calculate">Calculate</button>
+						<p>Result:<span class="result1"> </span></p>
+					</div>
+					<div class="assignment3">
+						<p>Factorial Recursive</p>
+						<p>Addition number:</p><input type="number" class="factorialrec" name="n"><button type="button" onclick="factorialRecursive()" value="Calculate">Calculate</button>
+						<p>Result: <span class="result2"></span></p>
+					</div>
+					<div class="assignment4">
+						<p>Factorial</p>
+					
+						<p>Addition number</p><input type="number" class="factorialit" name="n"><button type="button" onclick="factorialIterative()" value="Calculate">Calculate</button>
+					<p>Result: <span class="result3"></span></p>
+					</div>
+					<div class="assignment5">
+						<p>Combinations Factorial</p>
+						<p>Addition number</p><input type="number" class="comfact1" name="n"><span> and </span> <input type="number" class="comfact2" name="n"> <button type="button" onclick="combinationsFactorial()" value="Calculate">Calculate</button>
+						<p>Result: <span class="result4"</span></p>
+					</div>
+					<div class="assignment6">
+						<p>Combinations</p>
+						<p>Addition number</p><input type="number" class="com1" name="n"><span> and </span> <input type="number" class="com2" name="n"> <button type="button" onclick="combinations()" value="Calculate">Calculate</button>
+						<p>Result: <span class="result5"</span></p>
+					</div>
+					<div class="assignment7">
+						<p>Sort array</p><input type="number" class="n1" name="n">
+						<button type="button" onclick="createArray()" value="Calculate">Add</button><button type="button" onclick="sort()" value="calculate">Sort</button>
+						<input type="radio" name="sort1" value="incs" class="result62">Sort Incs
+						<input type="radio" name="sort1" value="desc" class="result62">Sort Desc<br>
+						<p>List of properties: <span class="result61"</span></p>
+						<p>Result of Sort: <span class="result6"</span></p>
+						
+					
+					</div>
+					<div class="assignment8">
+						<p>Sort object</p>
+						<p>Input property name:</p><input type="text" class="obj1" name="n"><button type="button" onclick="sortObject()" value="Add">Add property</button>
+					</div>
+					
+				</div>
+			</div>
+			</div>
+				
+	
+	
+	
+	
+	<script src="js/custom.js"></script>
+	<script src="js/mathfunctions.js"></script>
+	</body>
+	</html>
+	
+	
+	
+	
+	

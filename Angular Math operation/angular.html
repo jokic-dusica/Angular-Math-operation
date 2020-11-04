@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<link href="css/style.css" rel="stylesheet">
+		
+		
+		<!-- Bootstrap CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+		<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+		<script src="https://code.angularjs.org/1.6.9/angular.js"></script>
+		<title> Math operation</title>
+	
+	
+	</head>
+	
+	
+	<body ng-app="app">
+		<div ng-controller="Angular">
+		<header> 
+			<div class="header">
+				
+					<h1> Math operation</h1>
+				
+			</div>
+		</header>
+		
+		
+	<section class="main">
+		<div class="container">
+			<div class="row">
+				<div class="col-3">
+					<p>Choose operation:</p>
+					<select ng-model="assignment" ng-dropdown name="type">
+						<option ng-option value="summ">Choose operation</option>
+						<option ng-option value="assignment1">Sum odd numbers</option>
+						<option ng-option value="assignment2">Arithmetic mean</option>
+						<option ng-option value="assignment3">Factorial Recursive</option>
+						<option ng-option value="assignment4">Factorial</option>
+						<option ng-option value="assignment5">Combinations Factorial</option>
+						<option ng-option value="assignment6">Combinations</option>
+						<option ng-option value="assignment7">Sort array</option>
+						<option ng-option value="assignment8">Sort object</option>
+					</select>
+				</div>
+				<div class="col-9">
+					<div class="assignment1" ng-if="assignment == 'assignment1'">
+						<p> Sum odd numbers</p>
+						
+						<p>Addition odd numbers</p>
+						<p>Addition all odd numbers from k to n</p>
+						<p>Addition odd numbers between:</p><input type="number" class="additioninput1" name="k" ng-model="sumFirstOdd"><span> and </span><input type="number" class="additioninput2" name="n" ng-model="sumFirstOdd1"><button type="button" ng-click="additionOddNgArray(sumFirstOdd,sumFirstOdd1)" value="Calculate">Calculate</button>
+						<p> Result:  {{count}} </p>
+					</div>
+					<div class="assignment2" ng-if="assignment == 'assignment2'">
+						<p>Arithmetic mean</p>
+						
+						<p>Addition even numbers</p>
+						<p>Addition all even numbers from k to n</p>
+						<p>Addition even numbers between:</p><input type="number" class="additioneven1" name="k" ng-model="inputArithmetic1"> <span> and </span> <input type="number" class="additioneven2" name="n" ng-model="inputArithmetic2"><button type="button" ng-click="arithmeticNgMean1(inputArithmetic1,inputArithmetic2)" value="Calculate">Calculate</button>
+						<p>Result: {{resultArithmetic}} </span></p>
+					</div>
+					<div class="assignment3" ng-if="assignment == 'assignment3'">
+						<p>Factorial Recursive</p>
+						<p>Addition number:</p><input type="number" class="factorialrec" name="n" ng-model="inputRecursive"><button type="button" ng-click="factorialNgRecursive(inputRecursive)" value="Calculate">Calculate</button>
+						<p>Result: {{resultRecursive}}</p>
+					</div>
+					<div class="assignment4" ng-if="assignment == 'assignment4'">
+						<p>Factorial</p>
+					
+						<p>Addition number</p><input type="number" class="factorialit" name="n" ng-model="inputIterative"><button type="button" ng-click="factorialNgIterative(inputIterative)" value="Calculate">Calculate</button>
+					<p>Result: {{resultIterative}}</p>
+					</div>
+					<div class="assignment5" ng-if="assignment == 'assignment5'">
+						<p>Combinations Factorial</p>
+						<p>Addition number</p><input type="number" class="comfact1" name="n" ng-model = "inputcomf1"><span> and </span> <input type="number" class="comfact2" name="n" ng-model="inputcomf2"> <button type="button" ng-click="combinationsNgFactorial(inputcomf1,inputcomf2)" value="Calculate">Calculate</button>
+						<p>Result: {{resultComFact}}</p>
+					</div>
+					<div class="assignment6" ng-if="assignment == 'assignment6'">
+						<p>Combinations</p>
+						<p>Addition number</p><input type="number" class="com1" name="n" ng-model="inputcom1"><span> and </span> <input type="number" class="com2" name="n" ng-model="inputcom2"> <button type="button" ng-click="combinationsNg(inputcom1,inputcom2)" value="Calculate">Calculate</button>
+						<p>Result: {{combinations}}</p>
+					</div>
+					<div class="assignment7">
+						<p>Sort array</p><input type="number" class="n1" name="n">
+						<button type="button"  value="Calculate">Add</button><button type="button" value="calculate">Sort</button>
+						<input type="radio" name="sort1" value="incs" class="result62">Sort Incs
+						<input type="radio" name="sort1" value="desc" class="result62">Sort Desc<br>
+						<p>List of properties:</p>
+						<p>Result of Sort: </p>
+						
+					
+					</div>
+					<div class="assignment8">
+						<p>Sort object</p>
+						<p>Input property name:</p><input type="text" class="obj1" name="n"><button type="button" onclick="sortObject()" value="Add">Add property</button>
+					</div>
+					
+				</div>
+			</div>
+			</div>
+				
+	
+	
+	
+		</div>
+	<script src="js/custom.js"></script>
+	<script src="js/mathfunctions.js"></script>
+	<script src="js/angularController.js"></script>
+	</body>
+	</html>
+	
+	
+	
+	
+	
